@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    private TextView amountInput;
+    private EditText amountInput;
     private Button withdrawButton;
     private Button depositButton;
     private TextView amountDisplay;
@@ -20,11 +21,10 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        amountInput = (TextView)findViewById(R.id.amount_input);
+        amountInput = (EditText)findViewById(R.id.amount_input);
         withdrawButton = (Button)findViewById(R.id.withdraw_button);
         depositButton = (Button)findViewById(R.id.deposit_button);
         amountDisplay = (TextView)findViewById(R.id.amount_display);
-        amountDisplay.setText("Hello world!");
     }
 
 
