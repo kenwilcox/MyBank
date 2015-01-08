@@ -4,14 +4,27 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private TextView amountInput;
+    private Button withdrawButton;
+    private Button depositButton;
+    private TextView amountDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        amountInput = (TextView)findViewById(R.id.amount_input);
+        withdrawButton = (Button)findViewById(R.id.withdraw_button);
+        depositButton = (Button)findViewById(R.id.deposit_button);
+        amountDisplay = (TextView)findViewById(R.id.amount_display);
+        amountDisplay.setText("Hello world!");
     }
 
 

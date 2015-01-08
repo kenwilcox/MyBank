@@ -11,6 +11,7 @@
               tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/amount_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -21,12 +22,14 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/withdraw_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:text="@string/withdraw"/>
 
         <Button
+            android:id="@+id/deposit_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
@@ -35,6 +38,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/amount_display"
         android:text="@string/balance_placeholder"
         android:textSize="32sp"
         android:layout_width="wrap_content"
