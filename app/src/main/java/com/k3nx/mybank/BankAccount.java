@@ -6,18 +6,18 @@ package com.k3nx.mybank;
  */
 public class BankAccount {
 
-    private double balance;
-    public final static double overdraftFee = 30;
+    private double mBalance;
+    public final static double OVERDRAFT_FEE = 30;
 
     public void withdraw(double amount) {
-        balance -= amount;
+        mBalance -= amount;
     }
 
     public void deposit(double amount) {
-        balance += amount;
+        mBalance += amount;
     }
 
     public double getBalance() {
-        return balance;
+        return mBalance;
     }
 }
