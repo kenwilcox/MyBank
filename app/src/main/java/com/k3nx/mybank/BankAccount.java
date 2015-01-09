@@ -7,6 +7,7 @@ package com.k3nx.mybank;
 public class BankAccount {
 
     private double balance;
+    public static double overdraftFee = 30;
 
     public void withdraw(double amount) {
         balance -= amount;
