@@ -16,6 +16,10 @@ public class BankAccount {
     public void withdraw(double amount) {
         mBalance -= amount;
         Log.d(TAG, "Withdraw: " + amount);
+        if (mBalance < 0) {
+            mBalance -= OVERDRAFT_FEE;
+            Log.d(TAG, "Overdraft Charge: " + mBalance);
+        }
     }
 
     public void deposit(double amount) {
