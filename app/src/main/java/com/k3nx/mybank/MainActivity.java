@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+    private static final String TAG = "MainActivity";
+
     private EditText amountInput;
     private Button withdrawButton;
     private Button depositButton;
@@ -24,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d("MainActivity", "Overdraft fee is " + BankAccount.overdraftFee);
+        Log.d(TAG, "Overdraft fee is " + BankAccount.overdraftFee);
         currentAccount = new BankAccount();
 
         amountInput = (EditText)findViewById(R.id.amount_input);
