@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:inputType="numberDecimal|numberSigned"
-        android:hint="@string/amount_hint"/>
+        android:hint="@string/amount_hint"
+        android:singleLine="true"/>
 
     <LinearLayout
         android:layout_width="match_parent"
