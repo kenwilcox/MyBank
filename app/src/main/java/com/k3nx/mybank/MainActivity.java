@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BankAccount.overdraftFee = 100.0;
+
         Log.d("MainActivity", "Overdraft fee is " + BankAccount.overdraftFee);
         currentAccount = new BankAccount();
 
