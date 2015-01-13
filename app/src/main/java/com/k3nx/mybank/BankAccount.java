@@ -28,7 +28,7 @@ public abstract class BankAccount {
         }
     }
 
-    private int numberOfWithdrawals() {
+    protected int numberOfWithdrawals() {
         int count = 0;
         for (int i = 0; i < mTransactions.size(); i++) {
             if (mTransactions.get(i) < 0) {
