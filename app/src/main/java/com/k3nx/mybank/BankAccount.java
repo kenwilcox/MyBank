@@ -18,9 +18,11 @@ public class BankAccount {
     BankAccount() {
         mTransactions = new ArrayList<>();
     }
+
     public void withdraw(double amount) {
         mTransactions.add(-amount);
         Log.d(TAG, "Withdraw: " + amount);
+
         if (getBalance() < 0) {
             Log.d(TAG, "Overdraft Charge");
             mTransactions.add(-OVERDRAFT_FEE);
