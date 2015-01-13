@@ -1,4 +1,4 @@
-package com.k3nx.mybank;
+package com.k3nx.accounts;
 
 import android.util.Log;
 
@@ -14,7 +14,7 @@ public abstract class BankAccount {
     private ArrayList<Double> mTransactions;
     public final static double OVERDRAFT_FEE = 30;
 
-    BankAccount() {
+    protected BankAccount() {
         mTransactions = new ArrayList<>();
     }
 

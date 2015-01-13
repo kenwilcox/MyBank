@@ -1,4 +1,4 @@
-package com.k3nx.mybank;
+package com.k3nx.accounts;
 
 import android.util.Log;
 
