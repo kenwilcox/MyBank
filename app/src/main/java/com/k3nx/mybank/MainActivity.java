@@ -27,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         Log.d(TAG, "Overdraft fee is " + BankAccount.OVERDRAFT_FEE);
-        mCurrentAccount = new BankAccount();
+        mCurrentAccount = new BankAccount(BankAccount.Type.CHECKING);
 
         mAmountInput = (EditText)findViewById(R.id.amount_input);
         mWithdrawButton = (Button)findViewById(R.id.withdraw_button);

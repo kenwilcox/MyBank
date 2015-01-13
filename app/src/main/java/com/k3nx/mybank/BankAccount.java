@@ -6,17 +6,22 @@ import java.util.ArrayList;
 
 /**
  * Created by Ken Wilcox on 1/9/2015 2:55 PM.
- *
+ * Simple class for a Bank Account
  */
 public class BankAccount {
 
-    private static final String TAG = "BankAccount";
+    public enum Type {
+        CHECKING, SAVINGS
+    }
 
+    private static final String TAG = "BankAccount";
     private ArrayList<Double> mTransactions;
+    private Type mType;
     public final static double OVERDRAFT_FEE = 30;
 
-    BankAccount() {
+    BankAccount(Type accountType) {
         mTransactions = new ArrayList<>();
+        mType = accountType;
     }
 
     public void withdraw(double amount) {
