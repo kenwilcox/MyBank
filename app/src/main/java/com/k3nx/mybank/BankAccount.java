@@ -2,6 +2,8 @@ package com.k3nx.mybank;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+
 /**
  * Created by Ken Wilcox on 1/9/2015 2:55 PM.
  *
@@ -10,24 +12,31 @@ public class BankAccount {
 
     private static final String TAG = "BankAccount";
 
-    private double mBalance;
+    private ArrayList<Double> mTransactions;
     public final static double OVERDRAFT_FEE = 30;
 
+    BankAccount() {
+        mTransactions = new ArrayList<>();
+    }
     public void withdraw(double amount) {
-        mBalance -= amount;
+        mTransactions.add(-amount);
         Log.d(TAG, "Withdraw: " + amount);
-        if (mBalance < 0) {
-            mBalance -= OVERDRAFT_FEE;
-            Log.d(TAG, "Overdraft Charge: " + mBalance);
+        if (getBalance() < 0) {
+            Log.d(TAG, "Overdraft Charge");
+            mTransactions.add(-OVERDRAFT_FEE);
         }
     }
 
     public void deposit(double amount) {
-        mBalance += amount;
+        mTransactions.add(amount);
         Log.d(TAG, "Deposit: " + amount);
     }
 
     public double getBalance() {
-        return mBalance;
+        double total = 0;
+        for(int i = 0; i < mTransactions.size(); i++) {
+            total += mTransactions.get(i);
+        }
+        return total;
     }
 }
