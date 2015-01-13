@@ -8,28 +8,17 @@ import java.util.ArrayList;
  * Created by Ken Wilcox on 1/9/2015 2:55 PM.
  * Simple class for a Bank Account
  */
-public class BankAccount {
-
-    public enum Type {
-        CHECKING, SAVINGS
-    }
+public abstract class BankAccount {
 
     private static final String TAG = "BankAccount";
     private ArrayList<Double> mTransactions;
-    private Type mType;
     public final static double OVERDRAFT_FEE = 30;
 
-    BankAccount(Type accountType) {
+    BankAccount() {
         mTransactions = new ArrayList<>();
-        mType = accountType;
     }
 
     public void withdraw(double amount) {
-        if (mType == Type.SAVINGS) {
-           if (numberOfWithdrawals()  >= 3) {
-               return;
-           }
-        }
         mTransactions.add(-amount);
         Log.d(TAG, "Withdraw: " + amount);
 
